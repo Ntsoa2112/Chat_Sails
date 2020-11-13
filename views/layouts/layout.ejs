@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Sails App</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <%/* If you want to discourage search engines from indexing this site, uncomment the following line: */%>
+    <%/* <meta name="robots" content="noindex"> */%>
+
+
+    <!--
+        Stylesheets and Preprocessors
+        ==============================
+
+        You can always bring in CSS files manually with `<link>` tags, or asynchronously
+        using a solution like AMD (RequireJS).  Or, if you like, you can take advantage
+        of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+        By default, stylesheets from your `assets/styles` folder are included
+        here automatically (between STYLES and STYLES END). Both CSS (.css) and LESS (.less)
+        are supported. In production, your styles will be minified and concatenated into
+        a single file.
+
+        To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+
+            + Change the order of your CSS files
+            + Import stylesheets from other directories
+            + Use a different or additional preprocessor, like SASS, SCSS or Stylus
+    -->
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/accordion.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/accordion.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/ad.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/ad.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/breadcrumb.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/breadcrumb.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/button.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/button.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/card.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/card.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/checkbox.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/checkbox.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/comment.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/comment.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/container.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/container.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/dimmer.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/dimmer.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/divider.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/divider.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/dropdown.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/dropdown.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/embed.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/embed.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/feed.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/feed.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/flag.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/flag.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/form.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/form.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/grid.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/grid.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/header.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/header.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/icon.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/icon.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/image.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/image.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/input.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/input.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/item.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/item.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/label.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/label.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/list.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/list.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/loader.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/loader.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/menu.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/menu.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/message.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/message.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/modal.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/modal.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/nag.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/nag.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/placeholder.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/placeholder.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/popup.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/popup.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/progress.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/progress.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/rail.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/rail.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/rating.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/rating.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/reset.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/reset.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/reveal.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/reveal.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/search.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/search.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/segment.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/segment.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/shape.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/shape.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/sidebar.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/sidebar.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/site.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/site.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/statistic.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/statistic.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/step.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/step.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/sticky.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/sticky.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/tab.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/tab.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/table.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/table.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/transition.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/transition.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/video.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/components/video.min.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/semantic.css">
+    <link rel="stylesheet" href="/styles/Semantic-UI-CSS-master/semantic.min.css">
+    <!--STYLES END-->
+  </head>
+
+  <body>
+    <%- body %>
+
+
+
+    <!--
+        Client-side Templates
+        ========================
+
+        HTML templates are important prerequisites of modern, rich client applications.
+        To work their magic, frameworks like React, Vue.js, Angular, Ember, and Backbone
+        require that you load these templates client-side.
+
+        By default, your Gruntfile is configured to automatically load and precompile
+        client-side JST templates in your `assets/templates` folder, then
+        include them here automatically (between TEMPLATES and TEMPLATES END).
+
+        To customize this behavior to fit your needs, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+
+            + Import templates from other directories
+            + Use a different view engine (handlebars, dust, pug/jade, etc.)
+            + Internationalize your client-side templates using a server-side
+              stringfile before they're served.
+    -->
+
+    <!--TEMPLATES-->
+    <!--TEMPLATES END-->
+
+
+    <!--
+        Server-side View Locals
+        ========================
+
+        Sometimes, it's convenient to get access to your server-side view locals from
+        client-side JavaScript.  This can improve page load times, remove the need for
+        extra AJAX requests, and make your client-side code easier to understand and
+        to maintain.  Sails provides a simple mechanism for accessing dynamic view
+        locals: the "exposeLocalsToBrowser()" view partial.
+
+        For more information on using this built-in feature, see:
+        https://sailsjs.com/docs/concepts/views/locals#?escaping-untrusted-data-using-exposelocalstobrowser
+
+    -->
+
+
+    <!--
+
+      Client-side Javascript
+      ========================
+
+      You can always bring in JS files manually with `script` tags, or asynchronously
+      on the client using a solution like AMD (RequireJS).  Or, if you like, you can
+      take advantage of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+      By default, files in your `assets/js` folder are included here
+      automatically (between SCRIPTS and SCRIPTS END).  Both JavaScript (.js) and
+      CoffeeScript (.coffee) are supported. In production, your scripts will be minified
+      and concatenated into a single file.
+
+      To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+      For example, here are a few things you could do:
+
+          + Change the order of your scripts
+          + Import scripts from other directories
+          + Use a different preprocessor, like TypeScript
+
+    -->
+
+    <!--SCRIPTS-->
+    <script src="/dependencies/sails.io.js"></script>
+    <script src="/js/package.js"></script>
+    <script src="/js/semantic.js"></script>
+    <script src="/js/semantic.min.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>
